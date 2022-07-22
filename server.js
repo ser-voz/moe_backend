@@ -2,10 +2,10 @@ import express from 'express';
 import mongoose from "mongoose";
 import router from './routers/router.js';
 import phrasesRouter from './routers/phrasesRouter.js'
+//import cors from 'cors'
 
 
-
-const PORT   = 8000;
+const PORT   = 3000;
 const DB_URL = 'mongodb+srv://user:user@cluster0.wj8u5wk.mongodb.net/?retryWrites=true&w=majority';
 
 const app = express();
@@ -17,7 +17,7 @@ app.use('/api', phrasesRouter);
 
 
 //cors disable for another localhost port
-//app.use(cors({origin: 'http://localhost:8080/'}));
+//app.use(cors({origin: '*'}));
 
 
 
